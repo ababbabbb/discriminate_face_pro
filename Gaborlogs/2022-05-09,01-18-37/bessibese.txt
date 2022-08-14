@@ -1,0 +1,291 @@
+01:18:41 -> class ->mainis running
+01:18:41 -> class ->GaborFaceUIis running
+01:18:41 ->GaborFaceUI|正常 —>
+主窗体初始化
+01:18:41 -> class ->GaborDiscriminatris running
+01:18:41 ->GaborDiscriminatr|正常 —>
+初始化目标图片——灰度&归一化
+01:18:41 -> class ->GaborImgPreis running
+01:18:41 -> class ->GaborKenelis running
+01:18:41 ->GaborKenel|func ->filterBuild is running
+01:18:41 ->GaborKenel|正常 —>
+设置尺度及滤波器容器
+01:18:41 ->GaborKenel|正常 —>
+创建滤波器
+01:18:41 -> class ->GaborBPNetModelis running
+01:18:41 ->GaborFaceUI|func ->initWidgets is running
+01:18:41 ->GaborFaceUI|正常 —>
+初始化控件
+01:18:41 ->GaborFaceUI|func ->initTopologica is running
+01:18:41 ->GaborFaceUI|正常 —>
+布局完成，并开始展示
+01:18:44 ->GaborFaceUI|func ->trainModel is running
+01:18:44 ->GaborFaceUI|正常 —>
+弹出阻塞子窗口
+01:18:44 -> class ->GaborChildWindowis running
+01:18:44 ->GaborChildWindow|正常 —>
+设置窗体样式
+01:18:44 ->GaborChildWindow|正常 —>
+构造掩盖窗体控件
+01:18:44 ->GaborChildWindow|正常 —>
+展示掩盖窗体
+01:18:44 ->GaborFaceUI|正常 —>
+进入模型训练与构建
+01:18:44 ->GaborDiscriminatr|func ->buildModel is running
+01:18:44 ->GaborChildWindow|func ->setValue is running
+01:18:44 ->GaborChildWindow|正常 —>
+设进度条值为5
+01:18:44 ->GaborDiscriminatr|正常 —>
+获取数据集
+01:18:44 ->GaborDiscriminatr|func ->dataSet is running
+01:18:44 ->GaborDiscriminatr|正常 —>
+设置样本及标签
+01:18:44 ->GaborChildWindow|func ->setValue is running
+01:18:44 ->GaborChildWindow|正常 —>
+设进度条值为10
+01:18:44 ->GaborDiscriminatr|正常 —>
+进入100训练样本制作循环
+01:18:44 ->GaborImgPre|func ->preFunc is running
+01:18:44 ->GaborImgPre|正常 —>
+导入图片
+01:18:44 ->GaborImgPre|正常 —>
+灰度化
+01:18:44 ->GaborKenel|func ->getGabor is running
+01:18:44 ->GaborKenel|正常 —>
+使用滤波器处理图像
+01:18:44 ->GaborFaceUI|回溯 —>
+
+Traceback (most recent call last):
+  File "D:/projects/python/GaborFace2.0.1/GaborFaceUI.py", line 96, in trainModel
+    self.obj_discriminate.buildModel(self.childWindow)
+    self = <__main__.GaborFaceUI object at 0x00000269EB844700>
+  File "D:\projects\python\GaborFace2.0.1\Bessinese\discriminate.py", line 247, in buildModel
+    imgs_train, labels_train, imgs_valid, labels_valid = self.dataSet_Id(processBar)
+    processBar = <UIWidgets.trainStateWindow.GaborChildWindow object at 0x00000269EB844B80>
+    self = <Bessinese.discriminate.GaborDiscriminatr object at 0x00000269EB84CA60>
+  File "D:\projects\python\GaborFace2.0.1\Bessinese\discriminate.py", line 151, in dataSet_Id
+    meanImg_human = self.obj_GaborKenel.meanPooling(self.obj_GaborKenel.getGabor(img_human))
+    img_human = array([[[171, 171, 171],
+        [222, 222, 222],
+        [226, 226, 226],
+        ...,
+        [184, 184, 184],
+        [187, 187, 187],
+        [ 94,  94,  94]],
+
+       [[173, 173, 173],
+        [226, 226, 226],
+        [223, 223, 223],
+        ...,
+        [179, 179, 179],
+        [184, 184, 184],
+        [ 94,  94,  94]],
+
+       [[173, 173, 173],
+        [222, 222, 222],
+        [225, 225, 225],
+        ...,
+        [181, 181, 181],
+        [184, 184, 184],
+        [ 93,  93,  93]],
+
+       ...,
+
+       [[110, 110, 110],
+        [121, 121, 121],
+        [120, 120, 120],
+        ...,
+        [ 65,  65,  65],
+        [ 68,  68,  68],
+        [ 32,  32,  32]],
+
+       [[110, 110, 110],
+        [117, 117, 117],
+        [118, 118, 118],
+        ...,
+        [ 67,  67,  67],
+        [ 69,  69,  69],
+        [ 30,  30,  30]],
+
+       [[108, 108, 108],
+        [112, 112, 112],
+        [113, 113, 113],
+        ...,
+        [ 70,  70,  70],
+        [ 69,  69,  69],
+        [ 29,  29,  29]]], dtype=uint8)
+    index_human = '1201'
+    name_humanImg = 'BioID_1201.pgm'
+    path_baseData = 'D:\\projects\\python\\GaborFace2.0.1\\faceRes'
+    path_exe = 'D:\\projects\\python\\GaborFace2.0.1'
+    path_humanImgs = 'D:\\projects\\python\\GaborFace2.0.1\\faceRes\\imgs_person\\all'
+    path_unhumanImgs = 'D:\\projects\\python\\GaborFace2.0.1\\faceRes\\imgs_unhuman'
+    processBar = <UIWidgets.trainStateWindow.GaborChildWindow object at 0x00000269EB844B80>
+    self = <Bessinese.discriminate.GaborDiscriminatr object at 0x00000269EB84CA60>
+    t = 0
+    value_add_train = 10.01
+  File "D:\projects\python\GaborFace2.0.1\Bessinese\kenelCreator.py", line 60, in getGabor
+    accum = np.maximum(accum, fimg, accum)  # 逐步叠加滤波效果
+    accum = array([[[0, 0, 0],
+        [0, 0, 0],
+        [0, 0, 0],
+        ...,
+        [0, 0, 0],
+        [0, 0, 0],
+        [0, 0, 0]],
+
+       [[0, 0, 0],
+        [0, 0, 0],
+        [0, 0, 0],
+        ...,
+        [0, 0, 0],
+        [0, 0, 0],
+        [0, 0, 0]],
+
+       [[0, 0, 0],
+        [0, 0, 0],
+        [0, 0, 0],
+        ...,
+        [0, 0, 0],
+        [0, 0, 0],
+        [0, 0, 0]],
+
+       ...,
+
+       [[0, 0, 0],
+        [0, 0, 0],
+        [0, 0, 0],
+        ...,
+        [0, 0, 0],
+        [0, 0, 0],
+        [0, 0, 0]],
+
+       [[0, 0, 0],
+        [0, 0, 0],
+        [0, 0, 0],
+        ...,
+        [0, 0, 0],
+        [0, 0, 0],
+        [0, 0, 0]],
+
+       [[0, 0, 0],
+        [0, 0, 0],
+        [0, 0, 0],
+        ...,
+        [0, 0, 0],
+        [0, 0, 0],
+        [0, 0, 0]]], dtype=uint8)
+    fimg = array([[[ -33.745316,  -33.745316,  -33.745316],
+        [ 219.97826 ,  219.97826 ,  219.97826 ],
+        [ 154.57149 ,  154.57149 ,  154.57149 ],
+        ...,
+        [ 121.36608 ,  121.36608 ,  121.36608 ],
+        [ 256.8955  ,  256.8955  ,  256.8955  ],
+        [-201.34653 , -201.34653 , -201.34653 ]],
+
+       [[ -33.90622 ,  -33.90622 ,  -33.90622 ],
+        [ 219.56718 ,  219.56718 ,  219.56718 ],
+        [ 155.06601 ,  155.06601 ,  155.06601 ],
+        ...,
+        [ 121.94587 ,  121.94587 ,  121.94587 ],
+        [ 255.67706 ,  255.67706 ,  255.67706 ],
+        [-200.354   , -200.354   , -200.354   ]],
+
+       [[ -33.64686 ,  -33.64686 ,  -33.64686 ],
+        [ 218.2093  ,  218.2093  ,  218.2093  ],
+        [ 156.31627 ,  156.31627 ,  156.31627 ],
+        ...,
+        [ 122.664894,  122.664894,  122.664894],
+        [ 253.69205 ,  253.69205 ,  253.69205 ],
+        [-198.71744 , -198.71744 , -198.71744 ]],
+
+       ...,
+
+       [[  57.27318 ,   57.27318 ,   57.27318 ],
+        [  94.57629 ,   94.57629 ,   94.57629 ],
+        [  68.86449 ,   68.86449 ,   68.86449 ],
+        ...,
+        [  38.722443,   38.722443,   38.722443],
+        [  99.10211 ,   99.10211 ,   99.10211 ],
+        [ -87.5763  ,  -87.5763  ,  -87.5763  ]],
+
+       [[  55.011635,   55.011635,   55.011635],
+        [  90.5441  ,   90.5441  ,   90.5441  ],
+        [  71.623276,   71.623276,   71.623276],
+        ...,
+        [  39.343277,   39.343277,   39.343277],
+        [ 101.70764 ,  101.70764 ,  101.70764 ],
+        [ -89.9492  ,  -89.9492  ,  -89.9492  ]],
+
+       [[  53.35936 ,   53.35936 ,   53.35936 ],
+        [  89.59609 ,   89.59609 ,   89.59609 ],
+        [  72.676025,   72.676025,   72.676025],
+        ...,
+        [  40.124935,   40.124935,   40.124935],
+        [ 103.16085 ,  103.16085 ,  103.16085 ],
+        [ -91.33924 ,  -91.33924 ,  -91.33924 ]]], dtype=float32)
+    img = array([[[171, 171, 171],
+        [222, 222, 222],
+        [226, 226, 226],
+        ...,
+        [184, 184, 184],
+        [187, 187, 187],
+        [ 94,  94,  94]],
+
+       [[173, 173, 173],
+        [226, 226, 226],
+        [223, 223, 223],
+        ...,
+        [179, 179, 179],
+        [184, 184, 184],
+        [ 94,  94,  94]],
+
+       [[173, 173, 173],
+        [222, 222, 222],
+        [225, 225, 225],
+        ...,
+        [181, 181, 181],
+        [184, 184, 184],
+        [ 93,  93,  93]],
+
+       ...,
+
+       [[110, 110, 110],
+        [121, 121, 121],
+        [120, 120, 120],
+        ...,
+        [ 65,  65,  65],
+        [ 68,  68,  68],
+        [ 32,  32,  32]],
+
+       [[110, 110, 110],
+        [117, 117, 117],
+        [118, 118, 118],
+        ...,
+        [ 67,  67,  67],
+        [ 69,  69,  69],
+        [ 30,  30,  30]],
+
+       [[108, 108, 108],
+        [112, 112, 112],
+        [113, 113, 113],
+        ...,
+        [ 70,  70,  70],
+        [ 69,  69,  69],
+        [ 29,  29,  29]]], dtype=uint8)
+    kern = array([[ 0.00235158, -0.00493959, -0.09945135,  0.2508516 , -0.09945135,
+        -0.00493959,  0.00235158],
+       [ 0.00439332, -0.00922837, -0.18579958,  0.46865252, -0.18579958,
+        -0.00922837,  0.00439332],
+       [ 0.00639225, -0.0134272 , -0.27033678,  0.68188536, -0.27033678,
+        -0.0134272 ,  0.00639225],
+       [ 0.00724336, -0.01521501, -0.30633172,  0.77267736, -0.30633172,
+        -0.01521501,  0.00724336],
+       [ 0.00639225, -0.0134272 , -0.27033678,  0.68188536, -0.27033678,
+        -0.0134272 ,  0.00639225],
+       [ 0.00439332, -0.00922837, -0.18579958,  0.46865252, -0.18579958,
+        -0.00922837,  0.00439332],
+       [ 0.00235158, -0.00493959, -0.09945135,  0.2508516 , -0.09945135,
+        -0.00493959,  0.00235158]], dtype=float32)
+    self = <Bessinese.kenelCreator.GaborKenel object at 0x00000269EB84CB20>
+numpy.core._exceptions._UFuncOutputCastingError: Cannot cast ufunc 'maximum' output from dtype('float32') to dtype('uint8') with casting rule 'same_kind'

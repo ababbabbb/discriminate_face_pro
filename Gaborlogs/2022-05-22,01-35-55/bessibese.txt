@@ -1,0 +1,63 @@
+01:35:58 -> class ->mainis running
+01:35:58 -> class ->GaborFaceUIis running
+01:35:58 ->GaborFaceUI|正常 —>
+主窗体初始化
+01:35:58 -> class ->GaborDiscriminatris running
+01:35:58 ->GaborDiscriminatr|正常 —>
+初始化目标图片——灰度&归一化
+01:35:58 -> class ->GaborImgPreis running
+01:35:58 -> class ->GaborKenelis running
+01:35:58 ->GaborKenel|func ->filterBuild is running
+01:35:58 ->GaborKenel|正常 —>
+设置尺度及滤波器容器
+01:35:58 ->GaborKenel|正常 —>
+创建滤波器
+01:35:59 -> class ->GaborBPNetModelis running
+01:35:59 ->GaborFaceUI|func ->initWidgets is running
+01:35:59 ->GaborFaceUI|正常 —>
+初始化控件
+01:35:59 ->GaborFaceUI|func ->initTopologica is running
+01:35:59 ->GaborFaceUI|正常 —>
+布局完成，并开始展示
+01:36:04 ->GaborFaceUI|正常 —>
+导入图片
+01:36:12 ->GaborFaceUI|正常 —>
+opencv打开图片
+01:36:12 ->GaborFaceUI|正常 —>
+转换为QImg形式并展示
+01:36:13 ->GaborFaceUI|func ->discriminate is running
+01:36:13 ->GaborDiscriminatr|func ->discriminate is running
+01:36:13 ->GaborDiscriminatr|正常 —>
+进入识别
+01:36:13 ->GaborDiscriminatr|正常 —>
+导入模型
+01:36:13 ->GaborBPNetModel|func ->load is running
+01:36:13 ->GaborBPNetModel|正常 —>
+导入模型
+01:36:13 ->GaborBPNetModel|正常 —>
+路径为->D:\projects\python\GaborFace2.0.1\model\aggregate.face.model.h5
+01:36:13 ->GaborDiscriminatr|正常 —>
+目标图片预处理
+01:36:13 ->GaborImgPre|func ->preFunc is running
+01:36:13 ->GaborImgPre|正常 —>
+导入图片
+01:36:13 ->GaborImgPre|正常 —>
+灰度化
+01:36:13 ->GaborKenel|func ->getGabor is running
+01:36:13 ->GaborKenel|正常 —>
+使用滤波器处理图像
+01:36:13 ->GaborKenel|func ->meanPooling is running
+01:36:13 ->GaborKenel|正常 —>
+设置长宽高等值
+01:36:13 ->GaborKenel|正常 —>
+进入像素块平均化嵌套循环
+01:36:14 ->GaborDiscriminatr|正常 —>
+识别
+01:36:14 ->GaborDiscriminatr|正常 —>
+识别完毕
+01:36:14 ->GaborFaceUI|正常 —>
+当前为人脸
+01:36:14 ->GaborFaceUI|正常 —>
+圈出人脸范围
+01:36:14 ->GaborFaceUI|正常 —>
+转换为QImg形式并展示

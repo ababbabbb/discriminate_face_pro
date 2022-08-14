@@ -1,0 +1,6 @@
+01:17:19 -> class ->GaborImgPreis running
+01:17:19 ->GaborImgPre|func ->preFunc is running
+01:17:19 ->GaborImgPre|正常 —>
+导入图片
+01:17:19 ->GaborImgPre|正常 —>
+灰度化
